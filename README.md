@@ -1,0 +1,49 @@
+# Rainfall Prediction using Machine Learning
+
+This repository contains a Jupyter notebook that demonstrates a machine-learning pipeline to predict rainfall using meteorological data.
+
+**Contents**
+- `Rainfall_Prediction_using_Machine_Learning.ipynb` - Main notebook with data loading, preprocessing, model training, and evaluation.
+- `Rainfall.csv` - Dataset used by the notebook (place in the same directory as the notebook).
+- `rainfall_prediction_model.pkl` - (optional) serialized trained model produced by the notebook.
+
+**Setup**
+1. Create and activate a Python virtual environment (recommended):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+2. Install required packages:
+
+```powershell
+pip install pandas numpy matplotlib seaborn scikit-learn notebook
+```
+
+(Optionally create a `requirements.txt` with these packages.)
+
+**Run the notebook**
+1. Ensure `Rainfall.csv` is in the same folder as the notebook.
+2. Start Jupyter Notebook/Lab:
+
+```powershell
+jupyter notebook
+```
+
+3. Open `Rainfall_Prediction_using_Machine_Learning.ipynb` and run the cells in order. If you see a `NameError: name 'pd' is not defined`, run the first import cell (the one that imports `pandas as pd`, etc.) before running the data-loading cell.
+
+**Notes & Troubleshooting**
+- If `pd.read_csv("Rainfall.csv")` raises `FileNotFoundError`, confirm that `Rainfall.csv` is in the same directory and that the notebook's working directory is the project folder.
+- If imports fail, install the missing package(s) with `pip install <package>`.
+
+**What I changed / why**
+- Use a relative path for the dataset in the notebook (`Rainfall.csv`) so the notebook can load the file from the project directory.
+- Fixed a small typo in the notebook comment.
+
+**Next steps (suggested)**
+- Add `requirements.txt` to pin package versions.
+- Add a brief model card describing performance metrics and features used.
+
+---
+
